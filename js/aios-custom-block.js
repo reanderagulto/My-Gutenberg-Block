@@ -174,6 +174,22 @@ wp.blocks.registerBlockType('aios/custom-block', {
         );
     }, 
     save: function(props) {
-        return null;
+        return React.createElement(
+          "div",
+          null,
+           React.createElement("h3", null, props.attributes.companyName),
+           React.createElement("span", null, props.attributes.companyPhone),
+           React.createElement("br", null),
+           React.createElement("span", null, props.attributes.companyAddress),  
+           React.createElement("br", null),
+           React.createElement("span", null, props.attributes.companyAddress2),  
+           React.createElement("br", null),
+           React.createElement("span", null, props.attributes.companyCity),  
+           React.createElement("br", null),
+           React.createElement("span", null, props.attributes.companyState ),
+           React.createElement("br", null),
+           React.createElement("span", null, props.attributes.companyZip),
+           React.createElement("br", null)
+        );
     }
 })
