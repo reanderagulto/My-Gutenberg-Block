@@ -12,100 +12,165 @@ wp.blocks.registerBlockType('aios/custom-block', {
         companyZip: { type: 'string' }
     }, 
     edit: function(props) {
-        return React.createElement(
+
+      function updateCompanyName(event){ props.setAttributes( { companyName: event.target.value }) }
+      function updateCompanyPhone(event){ props.setAttributes( { companyPhone: event.target.value }) }
+      function updateCompanyAddress(event){ props.setAttributes( { companyAddress: event.target.value }) }
+      function updateCompanyAddress2(event){ props.setAttributes( { companyAddress2: event.target.value }) }
+      function updateCompanyCity(event){ props.setAttributes( { companyCity: event.target.value }) }
+      function updateCompanyState(event){ props.setAttributes( { companyState: event.target.value }) }
+      function updateCompanyZip(event){ props.setAttributes( { companyZip: event.target.value }) }
+
+      return React.createElement(
           "div",
           null,
-          /*#__PURE__*/ React.createElement(
-            "label",
+           React.createElement(
+            "div",
             {
               class: "form-control"
             },
-            "Company Name"
+             React.createElement(
+              "label",
+              {
+                class: "form-control"
+              },
+              "Company Name"
+            ),
+             React.createElement("br", null),
+             React.createElement("input", {
+              type: "text",
+              class: "form-control",
+              value: props.attributes.companyName,
+              placeholder: "Company Name",
+              onChange: updateCompanyName
+            })
           ),
-          /*#__PURE__*/ React.createElement("input", {
-            type: "text",
-            class: "form-control",
-            value: "",
-            placeholder: "Company Name"
-          }),
-          /*#__PURE__*/ React.createElement(
-            "label",
+           React.createElement(
+            "div",
             {
               class: "form-control"
             },
-            "Company Phone"
+             React.createElement(
+              "label",
+              {
+                class: "form-control"
+              },
+              "Company Phone"
+            ),
+             React.createElement("br", null),
+             React.createElement("input", {
+              type: "text",
+              class: "form-control",
+              value: props.attributes.companyPhone,
+              placeholder: "Company Phone",
+              onChange: updateCompanyPhone
+            })
           ),
-          /*#__PURE__*/ React.createElement("input", {
-            type: "text",
-            class: "form-control",
-            value: "",
-            placeholder: "Company Phone"
-          }),
-          /*#__PURE__*/ React.createElement(
-            "label",
+           React.createElement(
+            "div",
             {
               class: "form-control"
             },
-            "Company Address"
+             React.createElement(
+              "label",
+              {
+                class: "form-control"
+              },
+              "Company Address"
+            ),
+             React.createElement("br", null),
+             React.createElement("input", {
+              type: "text",
+              class: "form-control",
+              value: props.attributes.companyAddress,
+              placeholder: "Company Address",
+              onChange: updateCompanyAddress
+            })
           ),
-          /*#__PURE__*/ React.createElement("input", {
-            type: "text",
-            class: "form-control",
-            value: "",
-            placeholder: "Company Address"
-          }),
-          /*#__PURE__*/ React.createElement(
-            "label",
+           React.createElement(
+            "div",
             {
               class: "form-control"
             },
-            "Company Address 2"
+             React.createElement(
+              "label",
+              {
+                class: "form-control"
+              },
+              "Company Address 2"
+            ),
+             React.createElement("br", null),
+             React.createElement("input", {
+              type: "text",
+              class: "form-control",
+              value: props.attributes.companyAddress2,
+              placeholder: "Company Address 2",
+              onChange: updateCompanyAddress2
+            })
           ),
-          /*#__PURE__*/ React.createElement("input", {
-            type: "text",
-            class: "form-control",
-            value: "",
-            placeholder: "Company Address 2"
-          }),
-          /*#__PURE__*/ React.createElement(
-            "label",
+           React.createElement(
+            "div",
             {
               class: "form-control"
             },
-            "Company City"
+             React.createElement(
+              "label",
+              {
+                class: "form-control"
+              },
+              "Company City"
+            ),
+             React.createElement("br", null),
+             React.createElement("input", {
+              type: "text",
+              class: "form-control",
+              value: props.attributes.companyCity,
+              placeholder: "Company City",
+              onChange: updateCompanyCity
+            })
           ),
-          /*#__PURE__*/ React.createElement("input", {
-            type: "text",
-            class: "form-control",
-            value: "",
-            placeholder: "Company City"
-          }),
-          /*#__PURE__*/ React.createElement(
-            "label",
+           React.createElement(
+            "div",
             {
               class: "form-control"
             },
-            "Company State"
+             React.createElement(
+              "label",
+              {
+                class: "form-control"
+              },
+              "Company State"
+            ),
+             React.createElement("br", null),
+             React.createElement("input", {
+              type: "text",
+              class: "form-control",
+              value: props.attributes.companyState,
+              placeholder: "Company State",
+              onChange: updateCompanyState
+            })
           ),
-          /*#__PURE__*/ React.createElement("input", {
-            type: "text",
-            class: "form-control",
-            value: "",
-            placeholder: "Company State"
-          }),
-          /*#__PURE__*/ React.createElement(
-            "label",
+           React.createElement(
+            "div",
             {
               class: "form-control"
             },
-            "Company Zipcode"
-          ),
-          /*#__PURE__*/ React.createElement("input", {
-            type: "text",
-            class: "form-control",
-            value: "",
-            placeholder: "Company Zipcode"
-          })
+             React.createElement(
+              "label",
+              {
+                class: "form-control"
+              },
+              "Company Zipcode"
+            ),
+             React.createElement("br", null),
+             React.createElement("input", {
+              type: "text",
+              class: "form-control",
+              value: props.attributes.companyZip,
+              placeholder: "Company Zipcode",
+              onChange: updateCompanyZip
+            })
+          )
         );
     }, 
     save: function(props) {
